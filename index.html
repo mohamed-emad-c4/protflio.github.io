@@ -3,88 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Modern Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-gray-100 text-gray-900">
     <!-- Header Section -->
-    <header>
-        <nav>
-            <h1>My Portfolio</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header class="bg-gray-800 text-white py-4">
+        <nav class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">My Portfolio</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="hover:text-indigo-400">Home</a></li>
+                <li><a href="#projects" class="hover:text-indigo-400">Projects</a></li>
+                <li><a href="#skills" class="hover:text-indigo-400">Skills</a></li>
+                <li><a href="#blog" class="hover:text-indigo-400">Blog</a></li>
+                <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Home Section -->
-    <section id="home">
-        <img src="images/headshot.jpg" alt="Your Headshot">
-        <h2>Hi, I'm [Your Name]</h2>
-        <p>Freelance Flutter Developer</p>
+    <section id="home" class="flex flex-col items-center text-center py-20">
+        <img src="images/headshot.jpg" alt="Your Headshot" class="rounded-full w-48 h-48 shadow-lg mb-4">
+        <h2 class="text-4xl font-semibold">Hi, I'm [Your Name]</h2>
+        <p class="mt-2 text-lg text-gray-700">Freelance Flutter Developer</p>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <img src="images/project1.jpg" alt="Project 1">
-            <h3>Project Title</h3>
-            <p>Short description of the project.</p>
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-10">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card -->
+                <div class="bg-gray-200 p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="images/project1.jpg" alt="Project 1" class="rounded mb-4">
+                    <h3 class="text-xl font-semibold">Project Title</h3>
+                    <p class="text-gray-700 mt-2">Short description of the project.</p>
+                </div>
+                <!-- Repeat for more projects -->
+            </div>
         </div>
-        <!-- Repeat .project-card for more projects -->
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skill">
-            <h3>Flutter</h3>
-            <div class="progress-bar">
-                <div class="progress" style="width: 80%;"></div>
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-10">Skills</h2>
+            <div class="space-y-4">
+                <!-- Skill Bar -->
+                <div>
+                    <h3 class="text-lg font-semibold">Flutter</h3>
+                    <div class="bg-gray-300 rounded-full h-4 mt-2 overflow-hidden">
+                        <div class="bg-indigo-500 h-full" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <!-- Repeat for more skills -->
             </div>
         </div>
-        <!-- Repeat .skill for more skills -->
     </section>
 
     <!-- Blog Section -->
-    <section id="blog">
-        <h2>Blog</h2>
-        <div class="blog-post">
-            <h3>Blog Post Title</h3>
-            <p>Summary of the blog post.</p>
-            <a href="#">Read More</a>
+    <section id="blog" class="py-20 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-10">Blog</h2>
+            <div class="space-y-8">
+                <!-- Blog Post -->
+                <div class="bg-gray-200 p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-semibold">Blog Post Title</h3>
+                    <p class="text-gray-700 mt-2">Summary of the blog post.</p>
+                    <a href="#" class="text-indigo-500 mt-4 block">Read More</a>
+                </div>
+                <!-- Repeat for more posts -->
+            </div>
         </div>
-        <!-- Repeat .blog-post for more posts -->
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="#">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send</button>
-        </form>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-            <a href="https://github.com/yourprofile">GitHub</a>
-            <!-- Add more social links -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-10">Contact Me</h2>
+            <form action="#" class="max-w-xl mx-auto space-y-4">
+                <div>
+                    <label for="name" class="block text-lg">Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 border rounded mt-1" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-lg">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border rounded mt-1" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-lg">Message</label>
+                    <textarea id="message" name="message" class="w-full p-2 border rounded mt-1" required></textarea>
+                </div>
+                <button type="submit" class="w-full p-2 bg-indigo-500 text-white rounded mt-4">Send</button>
+            </form>
+            <div class="mt-8 text-center space-x-4">
+                <a href="https://linkedin.com/in/yourprofile" class="text-indigo-500">LinkedIn</a>
+                <a href="https://github.com/yourprofile" class="text-indigo-500">GitHub</a>
+                <!-- Add more social links -->
+            </div>
         </div>
     </section>
 
     <script src="script.js"></script>
 </body>
 </html>
-
