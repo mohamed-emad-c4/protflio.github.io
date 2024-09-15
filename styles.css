@@ -1,0 +1,137 @@
+/* Reset some default styling */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+}
+
+#home img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+/* Projects Section */
+.project-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Skills Section */
+.skill {
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    background: #2196f3;
+    height: 20px;
+}
+
+/* Blog Section */
+.blog-post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #2196f3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin-right: 10px;
+    color: #2196f3;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    
+    .project-card, .blog-post {
+        flex-direction: column;
+    }
+}
